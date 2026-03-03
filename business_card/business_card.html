@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Johnny Hernandez Business Card</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background-color:#0f172a;
+    color:#f8fafc;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    box-sizing:border-box;
+}
+
+h1{
+    margin-bottom:20px;
+    font-size:26px;
+    color:#38bdf8;
+    text-align:center;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+    background:#111827;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+.card-wrap{
+    display:flex;
+    justify-content:center;
+    perspective:1200px;
+}
+
+.card{
+    width:340px;
+    height:440px;
+    position:relative;
+    transform-style:preserve-3d;
+    transition:transform 0.8s ease;
+    border-radius:18px;
+}
+
+.card-wrap:hover .card{
+    transform:rotateY(180deg);
+}
+
+.side{
+    position:absolute;
+    inset:0;
+    border-radius:18px;
+    padding:20px;
+    box-sizing:border-box;
+    backface-visibility:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    background:#1e293b;
+    border:1px solid #334155;
+    box-shadow:0 15px 35px rgba(0,0,0,0.5);
+}
+
+.back{
+    transform:rotateY(180deg);
+}
+
+.profile{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+}
+
+.avatar{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #38bdf8;
+}
+
+.name{
+    font-size:22px;
+    font-weight:800;
+    margin:8px 0 2px 0;
+}
+
+.title{
+    font-size:14px;
+    color:#94a3b8;
+    font-weight:600;
+}
+
+.info-box{
+    margin-top:15px;
+    padding:10px;
+    border-radius:10px;
+    background:#0f172a;
+    border:1px solid #334155;
+    font-size:13px;
+    text-align:center;
+}
+
+.actions{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    margin-top:15px;
+}
+
+.link-btn{
+    text-decoration:none;
+    padding:10px 14px;
+    border-radius:10px;
+    font-weight:700;
+    font-size:14px;
+    transition:background 0.25s, transform 0.1s;
+    display:inline-block;
+}
+
+.link-primary{
+    background:#38bdf8;
+    color:#0f172a;
+}
+
+.link-primary:hover{
+    background:#0ea5e9;
+}
+
+.link-secondary{
+    background:#475569;
+    color:white;
+}
+
+.link-secondary:hover{
+    background:#334155;
+}
+
+.link-btn:focus{
+    outline:none;
+    box-shadow:0 0 0 3px rgba(56,189,248,0.4);
+}
+
+.link-btn:active{
+    transform:translateY(2px);
+}
+
+.back h3{
+    margin:0 0 10px 0;
+    font-size:18px;
+    color:#38bdf8;
+}
+
+.bio{
+    font-size:13px;
+    line-height:1.5;
+    color:#e2e8f0;
+}
+
+.contact{
+    margin-top:12px;
+    font-size:13px;
+    line-height:1.4;
+}
+
+.footer-note{
+    text-align:center;
+    font-size:12px;
+    color:#94a3b8;
+    margin-top:10px;
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>Johnny Hernandez Business Card</h1>
+
+<div class="container">
+    <div class="card-wrap">
+        <div class="card">
+            <section class="side front">
+
+                <div class="profile">
+                <img src="profile.jpg" alt="Profile Picture" class="avatar">
+
+                <div class="name">Johnny Hernandez</div>
+                <div class="title">Web Development Student</div>
+
+                <div class="actions">
+                    <a class="link-btn link-primary"
+                    href="https://github.com/JohnnyHernan117/CSC_455_web-design-course"
+                    target="_blank">
+                    GitHub
+                    </a>
+                </div>
+                </div>
+
+                <div class="info-box">
+                Attention to detail • Time management<br>
+                HTML • CSS • JavaScript
+                </div>
+
+                <div class="footer-note">
+                Hover anywhere to flip
+                </div>
+
+            </section>
+
+            <section class="side back">
+
+                <div>
+                    <h3>About Me</h3>
+                    <p class="bio">
+                        I am a web development student focused on building clean,
+                        structured websites using HTML and CSS. I manage my time well,
+                        pay strong attention to detail, and am preparing to teach
+                        programming fundamentals to students.
+                    </p>
+                </div>
+
+                <div class="contact">
+                    <strong>Email:</strong> fakeemail@email.com<br>
+                    <strong>Phone:</strong> (123) 456-7890
+                </div>
+
+                <div class="actions">
+                    <a class="link-btn link-secondary"
+                        href="mailto:yourname@email.com">
+                        Email Me
+                    </a>
+                </div>
+
+                <div class="footer-note">
+                Move mouse away to flip back
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
